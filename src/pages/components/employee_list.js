@@ -31,6 +31,16 @@ const EmployeeList = () => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md w-full">
         {/* TODO: Add header */}
+        <Head>
+          <title>Career Curve</title>
+        </Head>
+
+        <header className="bg-gradient-to-r from-green-400 to-blue-500 p-6">
+          <h1 className="text-4xl font-bold text-white">Career Curve</h1>
+          <p className="text-white">
+            Find your perfect tech job, tailored to your aspirations
+          </p>
+        </header>
       <div className="mb-6">
         <h1 className="text-lg font-semibold mb-2">Job Description</h1>
         <p className="text-gray-600">

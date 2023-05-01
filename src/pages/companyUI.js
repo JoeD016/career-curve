@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <>
       <div className={styles.container}>
-        <Head>
+        {/* <Head>
           <title>Company UI</title>
           <link rel="icon" href="/favicon.ico" />
-        </Head>
+        </Head> */}
         <main className={styles.main}>
           <EmployeeList />
         </main>
