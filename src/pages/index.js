@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,7 +64,12 @@ export default function Home() {
         </main>
 
         <footer className="bg-gray-200 p-6">
-          <p className="text-center">
+          <div className="flex justify-center space-x-4">
+            <Link legacyBehavior href="/companyUI">
+              <a className="text-blue-500 hover:underline">Company UI</a>
+            </Link>
+          </div>
+          <p className="text-center mt-4">
             &copy; 2023 Career Curve. All rights reserved.
           </p>
         </footer>
