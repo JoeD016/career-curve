@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,11 +13,16 @@ export default function Home() {
           <title>Career Curve</title>
         </Head>
 
-        <header className="bg-gradient-to-r from-green-400 to-blue-500 p-6">
-          <h1 className="text-4xl font-bold text-white">Career Curve</h1>
-          <p className="text-white">
-            Find your perfect tech job, tailored to your aspirations
-          </p>
+        <header className="bg-gradient-to-r from-green-400 to-blue-500 p-6 flex justify-between items-center">
+            <div>
+            <h1 className="text-4xl font-bold text-white">Career Curve</h1>
+            <p className="text-white">
+                Find your perfect tech job, tailored to your aspirations
+            </p>
+            </div>
+            <div>
+                <p className="text-white text-xl flex">Hi, Jane Doe</p>
+            </div>
         </header>
 
         <main className="container mx-auto p-6">
@@ -56,9 +62,16 @@ export default function Home() {
               your skills, experience, and aspirations, and let us help you find
               the perfect job.
             </p>
-            <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg mt-4">
+            {/* <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg mt-4">
               Sign Up Now
-            </button>
+            </button> */}
+            <Link href="/applicant-form"> {/* Add the Link component */}
+              <a>
+                <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg mt-4">
+                  Sign Up Now
+                </button>
+              </a>
+            </Link>
           </section>
         </main>
 
