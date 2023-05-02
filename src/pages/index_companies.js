@@ -25,33 +25,26 @@ export default function Home() {
             </div>
         </header>
 
-        
         <main className="container mx-auto p-6">
-          <section className = "bg-cover bg-center p-6 h-64 flex items-center justify-center mb-6" style={{backgroundImage: `url('/blue-green.png')`}}>
-            {/* <img src="/blue-green.png" className="w-full h-64" /> */}
-            <div>
-              <p className = "text-blue-500 text-7xl font-semibold py-2 px-4 rounded-md shadow-lg mb-6">
+            <section className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 mb-6 flex items-center justify-center">
+              <div className="flex flex-col items-center">
+                <p className = "text-blue-500 text-2xl font-semibold py-2 px-4 rounded-md shadow-lg border border-blue-500 mb-6">
                 Welcome to CareerCurve
                 </p>
-                <p className = "text-blue-500 text-2xl font-semibold py-2 px-4">
-                The Only Curve That Launches Your Career into Exponential Success!
-
-                  {/* Where Dreams Take Shape on the Path of Exponential Growth! */}
-                  {/* CareerCurve: The Only Curve That Propels Your Career to New Heights */}
-                  {/* Discover the Power of CareerCurve: Your Fast Track to Exponential Success */}
+                <p className = "text-blue-600 text-2xl ">
+                  Find Your Diamond In The Rough!
                 </p>
                 </div>
-          </section>
-        
+            </section>
             <section className = "bg-white rounded-lg p-6 mb-6 border border-blue-100 flex flex-col items-center">
               <p>
-              Are you tired of the same old job search routine? 
+                Are you tired of the same old recruitment process? 
               </p>
               <p>
-              Do you feel like your true potential is being overlooked? 
+                Do you feel like you're missing out on exceptional talent?
               </p>
               <p>
-              It's time to break free from the ordinary and embark on a career journey that is extraordinary.
+                It's time to break free from the ordinary and transform your hiring strategy into something extraordinary.
               </p>
               <p>
                 Start using our cutting-edge job matching platform that connects jobseekers and employers in a seamless and efficient way now.
@@ -90,11 +83,9 @@ export default function Home() {
 
           <section className="bg-white rounded-lg p-6 mb-6 border border-blue-100">
             <ul>
-              <li>Personalized job recommendations</li>
+              <li>Personalized applicants recommendations</li>
               <li>Robust candidate profiles</li>
-              <li>Wide range of technical roles</li>
-              <li>Insights into the company culture</li>
-              <li>Easy application process</li>
+              <li>Aspiration oriented match making</li>
             </ul>
             {/* Add a placeholder image */}
           </section>
@@ -108,18 +99,9 @@ export default function Home() {
           <section className="bg-white rounded-lg p-6 border border-blue-100">
             <p>
               Take the first step toward a more fulfilling career by signing up
-              for Career Curve. 
-              
-              </p>
-              <p>
-              Join us on this incredible journey and 
-              unlock a world of career possibilities by creating a comprehensive profile that showcases
+              for Career Curve. Create a comprehensive profile that showcases
               your skills, experience, and aspirations, and let us help you find
               the perfect job.
-              </p>
-              
-            <p>
-              Your dream career is just a click away. Get ready to curve your own path to success with CareerCurve!
             </p>
 
             {/* <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg mt-4">
@@ -130,7 +112,7 @@ export default function Home() {
           <section className=" rounded-lg p-6 flex flex-col items-center">
           <Link href="/applicant-form"> {/* Add the Link component */}
               <a>
-                <button className="bg-blue-400 text-white px-4 py-2 rounded-lg mt-4">
+                <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg mt-4">
                   Sign Up Now
                 </button>
               </a>

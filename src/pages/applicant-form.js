@@ -26,12 +26,12 @@ export default function Home() {
         </header>
 
         <main className="container mx-auto p-6">
-            <section className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 mb-6 flex items-center justify-center">
-                <p className = "bg-blue-400 text-white text-2xl font-semibold bg-white py-2 px-4 rounded-md shadow-lg ">
+            <section className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 mb-6 flex items-center justify-center ">
+                <p className = "text-blue-500 text-2xl font-semibold py-2 px-4 rounded-md shadow-lg border border-blue-500">
                 Congratulations on taking the first step towards an exciting new career journey with CareerCurve! 
                 </p>
             </section>
-            <section className="bg-white rounded-lg p-6 mb-6">
+            <section className="bg-white rounded-lg p-6 mb-6 border border-blue-100">
             <p>
                 We're thrilled to embark on this adventure with you and help you discover the perfect job opportunities that align with your passions and aspirations.
             </p>
@@ -51,12 +51,12 @@ export default function Home() {
           </section>
 
             <section className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 mb-6 flex items-center justify-center">
-                <p className = "bg-blue-400 text-white text-2xl font-semibold bg-white py-2 px-4 rounded-md shadow-lg ">
+                <p className = "text-blue-500 text-2xl font-semibold py-2 px-4 rounded-md shadow-lg border border-blue-500">
                     Your journey starts now. Let's make your dreams a reality!
                 </p>
             </section>
 
-            <section className="bg-white rounded-lg p-6 mb-6 flex flex-col items-center">
+            <section className="bg-white rounded-lg p-6 mb-6 flex flex-col items-center border border-blue-100">
                 <h2 className="text-2xl font-semibold mb-4 text-blue-600">Step 1: Upload Your CV/Resume</h2>
                 <input
                     type="file"
@@ -75,7 +75,7 @@ export default function Home() {
                 </iframe>
             </section>
 
-            <section className="rounded-lg p-6 mb-6 flex flex-col items-center">
+            <section className="rounded-lg p-6 mb-6 flex flex-col items-center ">
                 <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-2 px-4 rounded">
                     I confirm I have completed the form
                 </button>
