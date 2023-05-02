@@ -65,7 +65,12 @@ export default function Home() {
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               Hi, Jane Doe
-              <span className="material-icons text-2xl">arrow_drop_down</span>
+              {/* <span className="material-icons text-2xl">arrow_drop_down</span> */}
+              <img
+                src="/asset/drop-down-arrow.png"
+                alt="Dropdown Icon"
+                class="w-6 h-6 filter brightness-0 invert"
+              />
             </button>
             {dropdownOpen && (
               <div className="bg-blue-100 absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl">
