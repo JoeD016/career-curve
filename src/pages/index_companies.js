@@ -7,7 +7,7 @@ import { useState } from 'react';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
       <div className="min-h-screen bg-gray-100">
@@ -32,7 +32,7 @@ export default function Home() {
                 </li>
                 <li>
                     <Link href="/my-company" className="text-white text-2xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
-                    My Profile
+                    My Company
                     </Link>
                 </li>
                 <li>
@@ -42,7 +42,7 @@ export default function Home() {
                 </li>
                 <li>
                     <Link href="/candidates-bank" className="text-white text-2xl hover:text-blue-500  hover:bg-green-300 p-2 rounded-md">
-                    My Matches
+                    Candidates Bank
                     </Link>
                 </li>
             </ul>
@@ -77,44 +77,34 @@ export default function Home() {
           )}
         </div>
         </header>
-
         
-
-
         <main className="container mx-auto p-6">
-          
-            <section className = "bg-cover bg-center p-6 h-90 flex items-center justify-center mb-6" style={{backgroundImage: `url('/blue-green.png')`}}>
+        <section className = "bg-cover bg-center p-6 h-90 flex items-center justify-center mb-6" style={{backgroundImage: `url('/blue-green.png')`}}>
                 {/* <img src="/blue-green.png" className="w-full h-64" /> */}
                 <div className="text-center">
                   <p className = "text-blue-500 text-7xl font-semibold py-2 px-4 rounded-md shadow-lg mb-6">
                     Welcome to CareerCurve
                     </p>
                     <p className = "text-blue-500 text-3xl font-semibold py-2 px-4">
-                    The Only Curve That Launches Your Career into Exponential Success!
-
-                      {/* Where Dreams Take Shape on the Path of Exponential Growth! */}
-                      {/* CareerCurve: The Only Curve That Propels Your Career to New Heights */}
-                      {/* Discover the Power of CareerCurve: Your Fast Track to Exponential Success */}
+                    Find Your Diamond In The Rough!
                     </p>
                     </div>
               </section>
-
-        
             <section className = "bg-white rounded-lg p-6 mb-6 border border-blue-100 flex flex-col items-center">
-            <div className="text-blue-800 space-y-6 text-center">
+                <div className="text-blue-800 space-y-6 text-center">
               <p className="text-xl font-semibold text-2xl">
-                Are you tired of the same old job search routine?
+                Are you tired of the same old recruitment process? 
               </p>
               <p className="text-xl font-semibold text-2xl">
-                Do you feel like your true potential is being overlooked?
+                Do you feel like you're missing out on exceptional talent?
               </p>
               <p className="text-xl font-semibold text-2xl">
-                It's time to break free from the ordinary and embark on a career journey that is extraordinary.
+                It's time to break free from the ordinary and transform your hiring strategy into something extraordinary.
               </p>
               <p className="text-xl font-semibold text-2xl">
                 Start using our cutting-edge job matching platform that connects jobseekers and employers in a seamless and efficient way now.
               </p>
-          </div>
+              </div>
             </section>
 
             <section className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 mb-6 flex items-center justify-center">
@@ -123,7 +113,7 @@ export default function Home() {
                 </p>
             </section>
 
-          <section className="bg-white rounded-lg p-6 mb-6 border border-blue-100">
+            <section className="bg-white rounded-lg p-6 mb-6 border border-blue-100">
             <p className = "text-xl text-2xl text-blue-1000">
               Career Curve is a unique recruiting platform designed specifically
               for technical job seekers. Our platform not only showcases your
@@ -148,29 +138,24 @@ export default function Home() {
                 </p>
             </section>
 
-            <section className="bg-white rounded-lg p-6 mb-6 border border-blue-100">
-              <ul className="space-y-4">
+          <section className="bg-white rounded-lg p-6 mb-6 border border-blue-100">
+            <ul>
+            <ul className="space-y-4">
                 <li className="flex items-center space-x-6">
                   <span className="material-icons text-blue-500 text-6xl">edit</span>
-                  <span className="text-xl font-semibold text-2xl text-blue-1000">Personalized job recommendations</span>
+                  <span className="text-xl font-semibold text-2xl text-blue-1000">Tailored applicants recommendations</span>
                 </li>
                 <li className="flex items-center space-x-6">
-                  <span className="material-icons text-blue-500 text-6xl">account_box</span>
+                  <span className="material-icons text-blue-500 text-6xl">contacts</span>
                   <span className="text-xl font-semibold text-2xl text-blue-1000">Robust candidate profiles</span>
                 </li>
                 <li className="flex items-center space-x-6">
-                  <span className="material-icons text-blue-500 text-6xl">check_circle_outline</span>
-                  <span className="text-xl font-semibold text-2xl text-blue-1000">Wide range of technical roles</span>
+                  <span className="material-icons text-blue-500 text-6xl">cached</span>
+                  <span className="text-xl font-semibold text-2xl text-blue-1000">Aspiration oriented match making</span>
                 </li>
-                <li className="flex items-center space-x-6">
-                  <span className="material-icons text-blue-500 text-6xl">color_lens</span>
-                  <span className="text-xl font-semibold text-2xl text-blue-1000">Insights into the company culture</span>
-                </li>
-                <li className="flex items-center space-x-6">
-                  <span className="material-icons text-blue-500 text-6xl">description</span>
-                  <span className="text-xl font-semibold text-2xl text-blue-1000">Easy application process</span>
-                </li>
-              </ul>
+            </ul>
+            </ul>
+            {/* Add a placeholder image */}
           </section>
 
           <section className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 mb-6 flex items-center justify-center">
@@ -180,20 +165,11 @@ export default function Home() {
             </section>
 
           <section className="bg-white rounded-lg p-6 border border-blue-100">
-            <p className="text-xl text-2xl">
+            <p>
               Take the first step toward a more fulfilling career by signing up
-              for Career Curve. 
-              
-              </p>
-              <p className="text-xl text-2xl">
-              Join us on this incredible journey and 
-              unlock a world of career possibilities by creating a comprehensive profile that showcases
+              for Career Curve. Create a comprehensive profile that showcases
               your skills, experience, and aspirations, and let us help you find
               the perfect job.
-              </p>
-              
-            <p className="text-xl text-2xl">
-              Your dream career is just a click away. Get ready to curve your own path to success with CareerCurve!
             </p>
 
             {/* <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg mt-4">
@@ -203,7 +179,7 @@ export default function Home() {
 
           <section className=" rounded-lg p-6 flex flex-col items-center">
           <Link href="/applicant-form"> {/* Add the Link component */}
-                <button className="bg-blue-400 text-white px-4 py-2 rounded-lg mt-4">
+                <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg mt-4">
                   Sign Up Now
                 </button>
           </Link>
