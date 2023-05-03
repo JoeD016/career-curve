@@ -51,7 +51,7 @@ export default function Home() {
               </li>
               <li>
                 <Link
-                  href="/candidates-bank"
+                  href="/companyUI"
                   className="text-white text-2xl hover:text-blue-500  hover:bg-green-300 p-2 rounded-md"
                 >
                   My Matches
@@ -243,11 +243,6 @@ export default function Home() {
         </main>
 
         <footer className="bg-gray-200 p-6">
-          <div className="flex justify-center space-x-4">
-            <Link legacyBehavior href="/companyUI">
-              <a className="text-blue-500 hover:underline">Company UI</a>
-            </Link>
-          </div>
           <p className="text-center mt-4">
             &copy; 2023 Career Curve. All rights reserved.
           </p>
