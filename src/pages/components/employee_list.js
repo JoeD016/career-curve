@@ -3,14 +3,14 @@ import Head from "next/head";
 
 const EmployeeList = () => {
   const allEmployees = [
-    { name: 'John Doe', description: 'Full Stack Developer', match: 85 },
-    { name: 'Jane Smith', description: 'Data Analyst', match: 90 },
-    { name: 'Alice Johnson', description: 'UX Designer', match: 95 },
-    { name: 'Bob Brown', description: 'Project Manager', match: 80 },
-    { name: 'Charlie Wilson', description: 'Product Manager', match: 92 },
-    { name: 'Aya', description: 'Product Manager', match: 92 },
-    { name: 'Nick Pacia', description: 'Product Manager', match: 92 },
-    { name: 'Jojo', description: 'Product Manager', match: 92 },
+    { name: 'John Doe', description: 'Full Stack Developer', match: 98 },
+    { name: 'Jane Smith', description: 'Data Analyst', match: 92 },
+    { name: 'Alice Johnson', description: 'UX Designer', match: 89 },
+    { name: 'Bob Brown', description: 'Project Manager', match: 87 },
+    { name: 'Charlie Wilson', description: 'Product Manager', match: 86 },
+    { name: 'Aya', description: 'Product Manager', match: 85 },
+    { name: 'Nick Pacia', description: 'Product Manager', match: 83 },
+    { name: 'Jojo', description: 'Product Manager', match: 83 },
   ];
 
   const [visibleEmployees, setVisibleEmployees] = useState(5);
@@ -36,7 +36,7 @@ const EmployeeList = () => {
             Find your perfect tech job, tailored to your aspirations
           </p>
         </header> */}
-      <div className="mb-6">
+      {/* <div className="mb-6">
         <h1 className="text-lg font-semibold mb-2">Job Description</h1>
         <p className="text-gray-600">
           We are looking for a talented and experienced individual to join our team as a software engineer.
@@ -50,7 +50,7 @@ const EmployeeList = () => {
           Our proprietary matching algorithm analyzes each candidate's skills, experience, and preferences to determine the best fit for our organization.
           The percentage match displayed represents the overall compatibility of the candidate with the job requirements and company culture.
         </p>
-      </div>
+      </div> */}
 
       <h1 className="text-2xl font-bold mb-4">Prospective Employees</h1>
 

@@ -7,8 +7,40 @@ import { useState } from 'react';
 
 const inter = Inter({ subsets: ["latin"] });
 
+const spinnerStyle = `
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .spinner {
+    border: 25px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #3498db;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: spin 1s linear infinite;
+  }
+`;
+
 export default function Home() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [jobDescription, setJobDescription] = useState('');
+    const [showEmployeeList, setShowEmployeeList] = useState(false);
+
+    const handleJobDescriptionChange = (event) => {
+        setJobDescription(event.target.value);
+    };
+
+    const [spinning, setSpinning] = useState(false);
+
+    const handleShowEmployeeList = () => {
+      setSpinning(true);
+      setTimeout(() => {
+        setSpinning(false);
+        setShowEmployeeList(true);
+      }, 2000);
+    };
+
   return (
     <>
 <div className="min-h-screen bg-gray-100">
@@ -84,8 +116,37 @@ export default function Home() {
         </div>
         </header>
         <main className={styles.main}>
-          <EmployeeList />
-        </main>
+          <style>{spinnerStyle}</style>
+          <div className="mb-6">
+            <h1 className="text-lg font-semibold mb-2">Matching Algorithm</h1>
+            <p className="text-gray-600">
+              Our proprietary matching algorithm analyzes each candidate's skills, experience, and preferences to determine the best fit for our organization.
+              The percentage match displayed represents the overall compatibility of the candidate with the job requirements and company culture.
+            </p>
+          </div>
+          <div className="mb-4">
+            <h1 className="text-lg font-semibold mb-2">Job Description</h1>
+            <textarea
+              className="w-full p-2 border border-gray-300 rounded-md"
+              rows="5"
+              placeholder="Enter the job description here..."
+              value={jobDescription}
+              onChange={handleJobDescriptionChange}
+            ></textarea>
+          </div>
+          <div className="flex justify-center items-center mb-4 flex-col">
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              onClick={handleShowEmployeeList}
+            >
+              Get Recommendations
+            </button>
+            {spinning && (
+              <div className="spinner mt-4"></div>
+            )}
+          </div>
+          {showEmployeeList && <EmployeeList />}
+            </main>
       </div>
     </>
   );
