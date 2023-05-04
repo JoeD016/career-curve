@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from "next/head";
+import Link from "next/link";
 
 const EmployeeList = () => {
   const allEmployees = [
@@ -15,6 +16,7 @@ const EmployeeList = () => {
 
   const [visibleEmployees, setVisibleEmployees] = useState(5);
   const [showHideButton, setShowHideButton] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleShowMore = () => {
     setVisibleEmployees(visibleEmployees + 10);
@@ -35,12 +37,78 @@ const EmployeeList = () => {
           <title>Career Curve</title>
         </Head>
 
-        <header className="bg-gradient-to-r from-green-400 to-blue-500 p-6">
-          <h1 className="text-4xl font-bold text-white">Career Curve</h1>
-          <p className="text-white">
-            Find your perfect tech job, tailored to your aspirations
-          </p>
+        <header className="bg-gradient-to-r from-green-400 to-blue-500 p-6 flex justify-between items-center">
+            <div>
+            <h1 className="text-4xl font-bold text-white">Career Curve</h1>
+            <p className="text-white">
+                Find your perfect tech job, tailored to your aspirations
+            </p>
+            
+            </div>
+            <nav>
+            <ul className="flex space-x-20">
+                <li>
+                    <Link href="/index_companies" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
+                    Home
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/my-company" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
+                    My Company
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/new_job" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
+                    Add Job Listing
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/my-job-listings" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
+                    My Job Listings
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/companyUI" className="text-white text-3xl hover:text-blue-500  hover:bg-green-300 p-2 rounded-md">
+                    My Matches
+                    </Link>
+                </li>
+            </ul>
+            </nav>
+
+            <div className="relative text-2xl">
+                <button
+                    className="text-white text-3xl flex"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                    Hi, Jane Doe
+                    <img
+                      src="/asset/drop-down-arrow.png"
+                      alt="Dropdown Icon"
+                      class="w-7 h-6 filter brightness-0 invert mt-2 ml-2"
+                    />
+                </button>
+                {dropdownOpen && (
+                    <div className="bg-blue-100 absolute right-0 mt-2 py-2 w-64 bg-white rounded-md shadow-xl">
+                        <div className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        <Link href="/my-account">
+                            Settings
+                        </Link>
+                        </div>
+                        <div className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        <Link href="/report-problem">
+                            Report a Problem
+                        </Link>
+                        </div>
+                        <div className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        <Link href="/">
+                            Log Out
+                        </Link>
+                        </div>
+                    </div>
+          )}
+        </div>
         </header>
+
       <div className="mb-6">
         <h1 className="text-lg font-semibold mb-2">Job Description</h1>
         <p className="text-gray-600">
