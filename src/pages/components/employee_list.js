@@ -3,14 +3,14 @@ import Head from "next/head";
 
 const EmployeeList = () => {
   const allEmployees = [
-    { name: 'John Doe', description: 'Full Stack Developer', match: 98 },
-    { name: 'Jane Smith', description: 'Data Analyst', match: 92 },
-    { name: 'Alice Johnson', description: 'UX Designer', match: 89 },
-    { name: 'Bob Brown', description: 'Project Manager', match: 87 },
-    { name: 'Charlie Wilson', description: 'Product Manager', match: 86 },
-    { name: 'Aya', description: 'Product Manager', match: 85 },
-    { name: 'Nick Pacia', description: 'Product Manager', match: 83 },
-    { name: 'Jojo', description: 'Product Manager', match: 83 },
+    { name: 'Matt Stratakis', description: 'MS Finance', match: 98 },
+    { name: 'Pedro Ortego', description: 'MEng CS', match: 92 },
+    { name: 'Cait Burke', description: 'BA Finance', match: 89 },
+    { name: 'Michael James', description: 'BA Economics', match: 87 },
+    { name: 'Charlie Wilson', description: 'Data Scientist', match: 86 },
+    { name: 'Aya Chehabi', description: 'MEng CS', match: 85 },
+    { name: 'Nick Pacia', description: 'BA Economics', match: 84 },
+    { name: 'Jojo Dong', description: 'MEng CM', match: 83 },
   ];
 
   const [visibleEmployees, setVisibleEmployees] = useState(5);
@@ -24,6 +24,16 @@ const EmployeeList = () => {
   const handleHide = () => {
     setVisibleEmployees(5);
     setShowHideButton(false);
+  };
+
+  const [hoveredEmployeeIndex, setHoveredEmployeeIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredEmployeeIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredEmployeeIndex(null);
   };
 
   const employeesToShow = allEmployees.slice(0, visibleEmployees);
@@ -52,25 +62,32 @@ const EmployeeList = () => {
         </p>
       </div> */}
 
-      <h1 className="text-2xl font-bold mb-4">Prospective Employees</h1>
+<h1 className="text-2xl font-bold mb-4">Prospective Employees</h1>
 
-      <ul>
-        {employeesToShow.map((employee, index) => (
-          <li key={index} className="border-b border-gray-200 py-4">
-            <div className="flex justify-between">
-              <div>
-                <h1 className="text-lg font-medium">{employee.name}</h1>
-                <p className="text-gray-600">{employee.description}</p>
-              </div>
-              <div className="text-right">
-                <span className="inline-block bg-green-500 text-white px-3 py-1 text-sm font-bold rounded-full">
-                  {employee.match}%
-                </span>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
+<ul>
+  {employeesToShow.map((employee, index) => (
+    <li
+      key={index}
+      className={`border-b border-gray-200 py-4 ${
+        index === hoveredEmployeeIndex ? 'bg-gray-200' : ''
+      }`}
+      onMouseEnter={() => handleMouseEnter(index)}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="flex justify-between">
+        <div>
+          <h1 className="text-lg font-medium">{employee.name}</h1>
+          <p className="text-gray-600">{employee.description}</p>
+        </div>
+        <div className="text-right">
+          <span className="inline-block bg-green-500 text-white px-3 py-1 text-sm font-bold rounded-full">
+            {employee.match}%
+          </span>
+        </div>
+      </div>
+    </li>
+  ))}
+</ul>
       {visibleEmployees < allEmployees.length && !showHideButton && (
         <div className="flex justify-center mt-4">
           <button

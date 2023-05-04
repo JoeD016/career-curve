@@ -51,7 +51,7 @@ export default function Home() {
     };
 
 const RankQualitiesBox = ({ role }) => {
-  const [qualitiesOrder, setQualitiesOrder] = useState(Array(5).fill(''));
+  const [qualitiesOrder, setQualitiesOrder] = useState(Array(3).fill(''));
 
   const handleRankChange = (event, index) => {
     const newQuality = event.target.value;
@@ -63,19 +63,19 @@ const RankQualitiesBox = ({ role }) => {
   };
 
   const qualities = [
-    'Communication',
-    'Teamwork',
+    'Mathematical skills',
+    'Programming skills',
     'Problem-solving',
-    'Leadership',
-    'Technical skills',
+    'Communication skills',
+    'Interest in finance / economics',
   ];
 
   return (
     <div className="mt-4">
-      <h3 className="mb-2">{`Rank the qualities for ${role} candidates`}</h3>
+      <h3 className="mb-2">{`Rank qualities of ${role} candidates by importance:`}</h3>
       {qualitiesOrder.map((selectedQuality, index) => (
         <div key={index} className="flex items-center mb-2">
-          <label className="mr-2">{`Priority ${index + 1}:`}</label>
+          <label className="mr-2">{`Quality ${index + 1}:`}</label>
           <select value={selectedQuality} onChange={(event) => handleRankChange(event, index)}>
             <option value="">Select</option>
             {qualities.map((quality) => (
@@ -174,12 +174,12 @@ const RankQualitiesBox = ({ role }) => {
             </p>
           </div>
           <div className="mb-4">
-        <h1 className="text-lg font-semibold mb-2">Job Description</h1>
+        <h1 className="text-lg font-semibold mb-2">Open Roles</h1>
         <div className="flex flex-col">
         {[
-          { label: 'Software Engineer', description: 'Designs and develops software solutions' },
-          { label: 'Project Manager', description: 'Manages projects and coordinates teams' },
-          { label: 'Data Analyst', description: 'Analyzes data and provides insights' },
+          { label: 'Quantitative Trader', description: 'Develops analytical trading strategies with advanced mathematical techniques' },
+          { label: 'Software Engineer', description: 'Designs, develops, and deploys software to customers' },
+          { label: 'Data Scientist', description: 'Analyzes data and provides insights' },
         ].map((option) => (
           <div
             key={option.label}
