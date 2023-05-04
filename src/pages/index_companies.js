@@ -199,7 +199,7 @@ export default function Home() {
           </section>
 
           <section className=" rounded-lg p-6 flex flex-col items-center">
-          <Link href="/applicant-form">
+          <Link href="/index_companies">
                 <button className="bg-gradient-to-r from-green-400 to-blue-500 text-3xl text-white px-4 py-2 rounded-lg mt-4">
                   Sign Up Now
                 </button>
