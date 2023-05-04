@@ -49,13 +49,18 @@ export default function Home() {
             </nav>
 
             <div className="relative">
-                <button
-                    className="text-white text-2xl flex"
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                >
-                    Hi, Jane Doe
-                    <span className="material-icons text-2xl">arrow_drop_down</span>
-                </button>
+              <button
+                className="text-white text-2xl flex"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                Hi, Jane Doe
+                {/* <span className="material-icons text-2xl">arrow_drop_down</span> */}
+                <img
+                  src="/asset/drop-down-arrow.png"
+                  alt="Dropdown Icon"
+                  class="w-6 h-6 filter brightness-0 invert"
+                />
+              </button>
                 {dropdownOpen && (
                     <div className="bg-blue-100 absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl">
                         <div className="block px-4 py-2 text-gray-800 hover:bg-gray-100">

@@ -26,6 +26,7 @@ export default function Home() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [jobDescription, setJobDescription] = useState('');
     const [showEmployeeList, setShowEmployeeList] = useState(false);
+    const [hoveredRole, setHoveredRole] = useState("");
 
     const handleJobDescriptionChange = (event) => {
         setJobDescription(event.target.value);
@@ -40,6 +41,52 @@ export default function Home() {
         setShowEmployeeList(true);
       }, 2000);
     };
+
+    const handleMouseEnter = (role) => {
+      setHoveredRole(role);
+    };
+  
+    const handleMouseLeave = () => {
+      setHoveredRole("");
+    };
+
+const RankQualitiesBox = ({ role }) => {
+  const [qualitiesOrder, setQualitiesOrder] = useState([]);
+
+  const handleRankChange = (event, quality) => {
+    const newRank = parseInt(event.target.value);
+    setQualitiesOrder((prev) =>
+      prev.filter((item) => item.quality !== quality).concat({ quality, rank: newRank })
+    );
+  };
+
+  const qualities = [
+    'Communication',
+    'Teamwork',
+    'Problem-solving',
+    'Leadership',
+    'Technical skills',
+  ];
+
+  return (
+    <div className="mt-4">
+      <h3 className="mb-2">{`Rank the qualities for ${role} candidates`}</h3>
+      {qualities.map((quality) => (
+        <div key={quality} className="flex items-center mb-2">
+          <label className="mr-2">{quality}:</label>
+          <select onChange={(event) => handleRankChange(event, quality)}>
+            <option value="">Select</option>
+            {qualities.map((_, index) => (
+              <option key={index} value={index + 1}>
+                {index + 1}
+              </option>
+            ))}
+          </select>
+        </div>
+      ))}
+    </div>
+  );
+};
 
   return (
     <>
@@ -125,15 +172,40 @@ export default function Home() {
             </p>
           </div>
           <div className="mb-4">
-            <h1 className="text-lg font-semibold mb-2">Job Description</h1>
-            <textarea
-              className="w-full p-2 border border-gray-300 rounded-md"
-              rows="5"
-              placeholder="Enter the job description here..."
-              value={jobDescription}
-              onChange={handleJobDescriptionChange}
-            ></textarea>
+        <h1 className="text-lg font-semibold mb-2">Job Description</h1>
+        <div className="flex flex-col">
+        {[
+          { label: 'Software Engineer', description: 'Designs and develops software solutions' },
+          { label: 'Project Manager', description: 'Manages projects and coordinates teams' },
+          { label: 'Data Analyst', description: 'Analyzes data and provides insights' },
+        ].map((option) => (
+          <div
+            key={option.label}
+            onMouseEnter={() => handleMouseEnter(option.label)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <label
+              className="inline-flex items-center mb-2 p-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-200"
+            >
+              <input
+                type="radio"
+                className="form-radio"
+                name="jobDescription"
+                value={option.label}
+                onChange={handleJobDescriptionChange}
+              />
+              <span className="ml-2">{option.label}</span>
+            </label>
+            {hoveredRole === option.label && (
+              <div className="p-2 border border-gray-300 rounded-md bg-gray-200 mb-2">
+                {option.description}
+              </div>
+            )}
           </div>
+        ))}
+      </div>
+      {jobDescription && <RankQualitiesBox role={jobDescription} />}
+      </div>
           <div className="flex justify-center items-center mb-4 flex-col">
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
