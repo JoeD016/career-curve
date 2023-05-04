@@ -51,13 +51,15 @@ export default function Home() {
     };
 
 const RankQualitiesBox = ({ role }) => {
-  const [qualitiesOrder, setQualitiesOrder] = useState([]);
+  const [qualitiesOrder, setQualitiesOrder] = useState(Array(5).fill(''));
 
-  const handleRankChange = (event, quality) => {
-    const newRank = parseInt(event.target.value);
-    setQualitiesOrder((prev) =>
-      prev.filter((item) => item.quality !== quality).concat({ quality, rank: newRank })
-    );
+  const handleRankChange = (event, index) => {
+    const newQuality = event.target.value;
+    setQualitiesOrder((prev) => {
+      const updatedQualities = [...prev];
+      updatedQualities[index] = newQuality;
+      return updatedQualities;
+    });
   };
 
   const qualities = [
@@ -71,14 +73,14 @@ const RankQualitiesBox = ({ role }) => {
   return (
     <div className="mt-4">
       <h3 className="mb-2">{`Rank the qualities for ${role} candidates`}</h3>
-      {qualities.map((quality) => (
-        <div key={quality} className="flex items-center mb-2">
-          <label className="mr-2">{quality}:</label>
-          <select onChange={(event) => handleRankChange(event, quality)}>
+      {qualitiesOrder.map((selectedQuality, index) => (
+        <div key={index} className="flex items-center mb-2">
+          <label className="mr-2">{`Priority ${index + 1}:`}</label>
+          <select value={selectedQuality} onChange={(event) => handleRankChange(event, index)}>
             <option value="">Select</option>
-            {qualities.map((_, index) => (
-              <option key={index} value={index + 1}>
-                {index + 1}
+            {qualities.map((quality) => (
+              <option key={quality} value={quality} disabled={qualitiesOrder.includes(quality)}>
+                {quality}
               </option>
             ))}
           </select>
