@@ -31,7 +31,7 @@ export default function Home() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/my-company" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
+                    <Link href="/index_companies" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
                     My Company
                     </Link>
                 </li>
@@ -41,7 +41,7 @@ export default function Home() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/my-job-listings" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
+                    <Link href="/companyUI" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
                     My Job Listings
                     </Link>
                 </li>
@@ -58,7 +58,7 @@ export default function Home() {
                     className="text-white text-3xl flex"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                 >
-                    Hi, Jane Doe
+                    Hi, Sam
                     <img
                       src="/asset/drop-down-arrow.png"
                       alt="Dropdown Icon"
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
         </header>
         
-        <main className="container mx-auto p-6">
+        <main className="container mx-auto p-6 w-5/6">
           <section
             className="bg-cover bg-center p-6 min-h-screen flex items-center justify-center mb-6"
             style={{ backgroundImage: `url('/blue-green.png')`, minHeight: '40vh' }}>
@@ -97,7 +97,7 @@ export default function Home() {
                   Welcome to CareerCurve
                 </p>
                 <p className="text-blue-500 text-5xl font-semibold py-2 px-4">
-                  Find Your Diamond In The Rough!
+                  Your Fast Track To Exponential Success
                 </p>
               </div>
             </section>
@@ -127,20 +127,17 @@ export default function Home() {
 
             <section className="bg-white rounded-lg p-6 mb-6 border border-blue-100 text-justify">
   
-            <p className="text-3xl text-blue-1000 italic">
-              With CareerCurve, you can <span className="text-blue-400 font-bold italic">streamline</span> your hiring process, 
-              access a curated pool of <span className="text-blue-400 font-bold italic">qualified candidates</span>, 
-              and discover individuals who align perfectly with your <span className="text-blue-400 font-bold italic">company's vision</span>. 
-              Our platform utilizes advanced algorithms and machine learning techniques to ensure <span className="text-blue-400 font-bold italic">optimal matches</span>, 
-              <span className="text-blue-400 font-bold italic"> saving you time and effort</span> in finding the right fit.
+              <p className="text-3xl text-blue-1000 italic">
+                With CareerCurve, you can <span className="text-blue-400 font-bold italic">streamline</span> your hiring process, 
+                access a curated pool of <span className="text-blue-400 font-bold italic">qualified candidates</span>, 
+                and discover individuals who align perfectly with your <span className="text-blue-400 font-bold italic">company's vision</span>. 
+                Our platform utilizes advanced algorithms and machine learning techniques to ensure <span className="text-blue-400 font-bold italic">optimal matches</span>, 
+                <span className="text-blue-400 font-bold italic"> saving you time and effort</span> in finding the right fit.
               </p>
               <p className="text-3xl text-blue-1000 italic">
                 We are committed to helping you find the <span className="text-blue-400 font-bold italic">perfect candidates</span> and 
-              get your company on the <span className="text-blue-400 font-bold italic">path to success</span>.
+                get your company on the <span className="text-blue-400 font-bold italic">path to success</span>.
               </p>
-
-
-
 
           </section>
 

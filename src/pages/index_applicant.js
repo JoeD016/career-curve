@@ -43,7 +43,7 @@ export default function Home() {
               </li>
               <li>
                 <Link
-                  href="/my-job-listings"
+                  href="/index_applicant"
                   className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md"
                 >
                   My Job Listings
@@ -51,7 +51,7 @@ export default function Home() {
               </li>
               <li>
                 <Link
-                  href="/candidates-bank"
+                  href="/index_applicant"
                   className="text-white text-3xl hover:text-blue-500  hover:bg-green-300 p-2 rounded-md"
                 >
                   My Matches
@@ -65,13 +65,8 @@ export default function Home() {
               className="text-white text-3xl flex"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
-              Hi, Jane Doe
-              {/* <span className="material-icons text-2xl">arrow_drop_down</span> */}
-              <img
-                src="/asset/drop-down-arrow.png"
-                alt="Dropdown Icon"
-                class="w-7 h-6 filter brightness-0 invert mt-2 ml-2"
-              />
+              Hi, Pedro
+              <span className="material-icons text-2xl">arrow_drop_down</span>
             </button>
             {dropdownOpen && (
               <div className="bg-blue-100 absolute right-0 mt-2 py-2 w-64 bg-white rounded-md shadow-xl">

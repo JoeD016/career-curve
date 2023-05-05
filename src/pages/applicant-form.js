@@ -44,7 +44,7 @@ export default function Home() {
               </li>
               <li>
                 <Link
-                  href="/my-job-listings"
+                  href="/index_applicant"
                   className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md"
                 >
                   My Job Listings
@@ -52,7 +52,7 @@ export default function Home() {
               </li>
               <li>
                 <Link
-                  href="/candidates-bank"
+                  href="/index_applicant"
                   className="text-white text-3xl hover:text-blue-500  hover:bg-green-300 p-2 rounded-md"
                 >
                   My Matches
@@ -66,7 +66,7 @@ export default function Home() {
               className="text-white text-3xl flex"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
-              Hi, Jane Doe
+              Hi, Pedro
               <span className="material-icons text-2xl">arrow_drop_down</span>
             </button>
             {dropdownOpen && (
@@ -98,25 +98,29 @@ export default function Home() {
               discover the <span className="text-blue-400 font-bold italic">perfect job opportunities</span> that align with your 
                <span className="text-blue-400 font-bold italic"> passions</span> and <span className="text-blue-400 font-bold italic">aspirations</span>.
             </p>
+
             <p className="text-3xl text-blue-1000">
-              This form is your key to unlocking a world of <span className="text-blue-400 font-bold">tailored</span> job
-              recommendations specifically curated for you. We want to
-              understand what <span className="text-blue-400 font-bold">drives you</span>, what makes your heart skip a beat, and
-              what ignites that <span className="text-blue-400 font-bold">spark of excitement</span> when it comes to your
-              professional life. Think of it as your personal gateway to a realm
-              of endless possibilities. It's a chance for you to showcase your
-              <span className="text-blue-400 font-bold"> skills</span>, <span className="text-blue-400 font-bold">dreams</span>, and <span className="text-blue-400 font-bold">unique personality</span>. But this form is more than
-              just a questionnaire. It's a bridge connecting you to the
-              opportunities that can shape your <span className="text-blue-400 font-bold">future</span>. It's a canvas where you
+            At CareerCurve we're passionate about finding your next job that aligns with your larger career goals, 
+            even if it differs from your past experience.
+
+              This form is a canvas where you
               can paint a vivid picture of your career aspirations and watch as
               we transform them into tangible, tailored recommendations that
               <span className="text-blue-400 font-bold"> perfectly match</span> your <span className="text-blue-400 font-bold">ambitions</span>.
             </p>
+
             <p className="text-3xl text-blue-1000">
-              So, take a deep breath, let your <span className="text-blue-400 font-bold">imagination</span> soar, and let the
-              magic of this form guide us on an unforgettable journey together.
-              Get ready to dive in and discover a world of career opportunities
-              that are <span className="text-blue-400 font-bold">tailor-made for you</span>.
+
+            Please complete your profile to find the perfect technical job to meet your current experience and, 
+            more importantly, where you want to go! 
+            
+            It's a chance for you to showcase your
+              <span className="text-blue-400 font-bold"> skills</span>, 
+              <span className="text-blue-400 font-bold">dreams</span>, 
+              and <span className="text-blue-400 font-bold">unique personality</span>.
+
+            All questions are optional but the more information you provide the better we can match you 
+            to your next great opportunity!
             </p>
             {/* Add a placeholder image */}
           </section>

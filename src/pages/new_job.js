@@ -46,7 +46,7 @@ export default function Home() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/my-company" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
+                    <Link href="/index_companies" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
                     My Company
                     </Link>
                 </li>
@@ -56,7 +56,7 @@ export default function Home() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/my-job-listings" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
+                    <Link href="/companyUI" className="text-white text-3xl hover:text-blue-500 hover:bg-green-300 p-2 rounded-md">
                     My Job Listings
                     </Link>
                 </li>
@@ -73,7 +73,7 @@ export default function Home() {
                     className="text-white text-3xl flex"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                 >
-                    Hi, Jane Doe
+                    Hi, Sam
                     <img
                       src="/asset/drop-down-arrow.png"
                       alt="Dropdown Icon"
