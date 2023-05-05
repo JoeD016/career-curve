@@ -21,8 +21,8 @@ const handler = async (req, res) => {
         const reqConcepts = req.body.concepts;
         queryRes = await client.graphql
           .get()
-          .withClassName("MLDescription")
-          .withFields("name, type, description")
+          .withClassName("Candidates")
+          .withFields("name, strength, industries")
           .withNearText({ concepts: [reqConcepts] })
           .withLimit(numberRes)
           .do();
