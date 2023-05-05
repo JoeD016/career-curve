@@ -73,13 +73,16 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3006/api/getCandidateProfiles",
+          "http://localhost:3000/api/getCandidateProfiles",
           {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ num_response: 8, concepts: jobDescription }), // Replace jobDescription with your request body data
+            body: JSON.stringify({
+              num_response: 8,
+              concepts: jobDescription,
+            }), // Replace jobDescription with your request body data
           }
         );
 
@@ -322,7 +325,12 @@ export default function Home() {
                       type="radio"
                       className="form-radio"
                       name="jobDescription"
-                      value={option.label + ": " + option.description}
+                      value={
+                        "problem solving, fast learning" +
+                        option.label +
+                        ": " +
+                        option.description
+                      }
                       onChange={handleJobDescriptionChange}
                     />
                     <span className="ml-2">{option.label}</span>
