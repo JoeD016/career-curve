@@ -1,18 +1,6 @@
-import React, { useState } from 'react';
-import Head from "next/head";
+import React, { useState } from "react";
 
-const EmployeeList = () => {
-  const allEmployees = [
-    { name: 'Matt Stratakis', description: 'MS Finance', match: 98 },
-    { name: 'Pedro Ortego', description: 'MEng CS', match: 92 },
-    { name: 'Cait Burke', description: 'BA Finance', match: 89 },
-    { name: 'Michael James', description: 'BA Economics', match: 87 },
-    { name: 'Charlie Wilson', description: 'Data Scientist', match: 86 },
-    { name: 'Aya Chehabi', description: 'MEng CS', match: 85 },
-    { name: 'Nick Pacia', description: 'BA Economics', match: 84 },
-    { name: 'Jojo Dong', description: 'MEng CM', match: 83 },
-  ];
-
+const EmployeeList = ({ allEmployees }) => {
   const [visibleEmployees, setVisibleEmployees] = useState(5);
   const [showHideButton, setShowHideButton] = useState(false);
 
@@ -40,7 +28,7 @@ const EmployeeList = () => {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md w-full">
-        {/* <header className="bg-gradient-to-r from-green-400 to-blue-500 p-6">
+      {/* <header className="bg-gradient-to-r from-green-400 to-blue-500 p-6">
           <h1 className="text-4xl font-bold text-white">Career Curve</h1>
           <p className="text-white">
             Find your perfect tech job, tailored to your aspirations
@@ -62,48 +50,55 @@ const EmployeeList = () => {
         </p>
       </div> */}
 
+      <section className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 mb-6 flex items-center justify-center ">
+        <p className="text-blue-500 text-4xl font-semibold py-2 px-4 text-center">
+          Your Best Matches
+        </p>
+      </section>
 
-        <section className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 mb-6 flex items-center justify-center ">
-            <p className="text-blue-500 text-4xl font-semibold py-2 px-4 text-center">
-              Your Best Matches
-            </p>
-            </section>
+      <ul>
+        {employeesToShow.map((employee, index) => (
+          <li
+            key={index}
+            className={`border-b border-gray-200 py-4 ${
+              index === hoveredEmployeeIndex ? "bg-gray-200" : ""
+            }`}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="flex justify-between">
+              <div className="flex">
+                <button className="inline-block bg-blue-400 text-white px-3 py-1 text-2xl font-bold ml-8 mr-8">
+                  <span className="material-icons text-white text-3xl">
+                    perm_identity
+                  </span>
+                </button>
+                <section>
+                  <h1 className="text-3xl">{employee.name}</h1>
+                  <p className="text-2xl text-gray-600">{employee.strength}</p>
+                  <p className="text-2xl text-gray-600">
+                    {employee.industries}
+                  </p>
+                </section>
+              </div>
+              <div className="text-right">
+                {/* <button className="inline-block bg-blue-600 hover:bg-blue-900 text-white px-3 py-1 text-2xl font-bold rounded-full mr-8"> */}
+                <a
+                  href="/profile"
+                  className="mr-8 text-blue-500 text-xl hover:text-blue-700 font-bold underline"
+                >
+                  View Profile
+                </a>
+                {/* </button> */}
 
-<ul>
-  {employeesToShow.map((employee, index) => (
-    
-    <li
-      key={index}
-      className={`border-b border-gray-200 py-4 ${
-        index === hoveredEmployeeIndex ? 'bg-gray-200' : ''
-      }`}
-      onMouseEnter={() => handleMouseEnter(index)}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="flex justify-between">
-        <div className = "flex">
-          <button className="inline-block bg-blue-400 text-white px-3 py-1 text-2xl font-bold ml-8 mr-8">
-            <span className="material-icons text-white text-3xl">perm_identity</span>
-          </button>
-          <section>
-              <h1 className="text-3xl">{employee.name}</h1>
-              <p className="text-2xl text-gray-600">{employee.description}</p>
-          </section>
-        </div>
-        <div className="text-right">
-        
-          {/* <button className="inline-block bg-blue-600 hover:bg-blue-900 text-white px-3 py-1 text-2xl font-bold rounded-full mr-8"> */}
-            <a href="/profile" class="mr-8 text-blue-500 text-xl hover:text-blue-700 font-bold underline">View Profile</a>
-          {/* </button> */}
-
-          <span className="inline-block bg-green-500 text-white px-3 py-1 text-2xl font-bold rounded-full">
-            {employee.match}%
-          </span>
-        </div>
-      </div>
-    </li>
-  ))}
-</ul>
+                <span className="inline-block bg-green-500 text-white px-3 py-1 text-2xl font-bold rounded-full">
+                  {employee.match}%
+                </span>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
       {visibleEmployees < allEmployees.length && !showHideButton && (
         <div className="flex justify-center mt-4">
           <button

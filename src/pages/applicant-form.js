@@ -19,7 +19,9 @@ export default function Home() {
 
         <header className="bg-gradient-to-r from-green-400 to-blue-500 p-6 flex justify-between items-center">
           <div>
-            <h1 className="text-4xl font-bold text-white">Career Curve</h1>
+            <Link href="./">
+              <h1 className="text-4xl font-bold text-white">Career Curve</h1>
+            </Link>
             <p className="text-white">
               Find your perfect tech job, tailored to your aspirations
             </p>
@@ -94,33 +96,48 @@ export default function Home() {
           </section>
           <section className="bg-white rounded-lg text-3xl p-6 mb-6 border border-blue-100 italic">
             <p>
-              We're thrilled to embark on this <span className="text-blue-400 font-bold italic">adventure</span> with you and help you
-              discover the <span className="text-blue-400 font-bold italic">perfect job opportunities</span> that align with your 
-               <span className="text-blue-400 font-bold italic"> passions</span> and <span className="text-blue-400 font-bold italic">aspirations</span>.
+              We're thrilled to embark on this{" "}
+              <span className="text-blue-400 font-bold italic">adventure</span>{" "}
+              with you and help you discover the{" "}
+              <span className="text-blue-400 font-bold italic">
+                perfect job opportunities
+              </span>{" "}
+              that align with your
+              <span className="text-blue-400 font-bold italic">
+                {" "}
+                passions
+              </span>{" "}
+              and{" "}
+              <span className="text-blue-400 font-bold italic">
+                aspirations
+              </span>
+              .
             </p>
 
             <p className="text-3xl text-blue-1000">
-            At CareerCurve we're passionate about finding your next job that aligns with your larger career goals, 
-            even if it differs from your past experience.
-
-              This form is a canvas where you
-              can paint a vivid picture of your career aspirations and watch as
-              we transform them into tangible, tailored recommendations that
-              <span className="text-blue-400 font-bold"> perfectly match</span> your <span className="text-blue-400 font-bold">ambitions</span>.
+              At CareerCurve we're passionate about finding your next job that
+              aligns with your larger career goals, even if it differs from your
+              past experience. This form is a canvas where you can paint a vivid
+              picture of your career aspirations and watch as we transform them
+              into tangible, tailored recommendations that
+              <span className="text-blue-400 font-bold">
+                {" "}
+                perfectly match
+              </span>{" "}
+              your <span className="text-blue-400 font-bold">ambitions</span>.
             </p>
 
             <p className="text-3xl text-blue-1000">
-
-            Please complete your profile to find the perfect technical job to meet your current experience and, 
-            more importantly, where you want to go! 
-            
-            It's a chance for you to showcase your
-              <span className="text-blue-400 font-bold"> skills</span>, 
-              <span className="text-blue-400 font-bold">dreams</span>, 
-              and <span className="text-blue-400 font-bold">unique personality</span>.
-
-            All questions are optional but the more information you provide the better we can match you 
-            to your next great opportunity!
+              Please complete your profile to find the perfect technical job to
+              meet your current experience and, more importantly, where you want
+              to go! It's a chance for you to showcase your
+              <span className="text-blue-400 font-bold"> skills</span>,
+              <span className="text-blue-400 font-bold">dreams</span>, and{" "}
+              <span className="text-blue-400 font-bold">
+                unique personality
+              </span>
+              . All questions are optional but the more information you provide
+              the better we can match you to your next great opportunity!
             </p>
             {/* Add a placeholder image */}
           </section>

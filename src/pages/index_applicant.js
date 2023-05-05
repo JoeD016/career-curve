@@ -18,7 +18,9 @@ export default function Home() {
 
         <header className="bg-gradient-to-r from-green-400 to-blue-500 p-6 flex justify-between items-center">
           <div>
-            <h1 className="text-4xl font-bold text-white">Career Curve</h1>
+            <Link href="./">
+              <h1 className="text-4xl font-bold text-white">Career Curve</h1>
+            </Link>
             <p className="text-white">
               Find your perfect tech job, tailored to your aspirations
             </p>
@@ -85,16 +87,19 @@ export default function Home() {
         </header>
 
         <main className="container mx-auto p-6">
-        <section
+          <section
             className="bg-cover bg-center p-6 min-h-screen flex items-center justify-center mb-6"
-            style={{ backgroundImage: `url('/blue-green.png')`, minHeight: '40vh' }}
+            style={{
+              backgroundImage: `url('/blue-green.png')`,
+              minHeight: "40vh",
+            }}
           >
             {/* <img src="/blue-green.png" className="w-full h-64" /> */}
             <div className="text-center">
-                {/* <span className="material-icons text-blue-500 text-6xl">
+              {/* <span className="material-icons text-blue-500 text-6xl">
                     edit
                 </span> */}
-                <span class="bi bi-box text-blue-700 text-9xl"></span>
+              <span class="bi bi-box text-blue-700 text-9xl"></span>
               <p className="text-blue-600 text-9xl font-semibold py-2 px-4 rounded-md mb-6">
                 Welcome to CareerCurve
               </p>
@@ -135,18 +140,49 @@ export default function Home() {
 
           <section className="bg-white rounded-lg p-6 mb-6 border border-blue-100 text-justify">
             <p className="text-3xl text-blue-1000 italic">
-              Career Curve is a <span className="text-blue-400 font-bold italic">unique recruiting platform</span> designed specifically
-              for <span className="text-blue-400 font-bold italic">technical job seekers</span>. Our platform not only showcases your
-              <span className="text-blue-400 font-bold italic"> past experience</span> but also highlights your <span className="text-blue-400 font-bold italic">future aspirations</span>,
-              making it easier for recruiters to find the perfect candidate.
+              Career Curve is a{" "}
+              <span className="text-blue-400 font-bold italic">
+                unique recruiting platform
+              </span>{" "}
+              designed specifically for{" "}
+              <span className="text-blue-400 font-bold italic">
+                technical job seekers
+              </span>
+              . Our platform not only showcases your
+              <span className="text-blue-400 font-bold italic">
+                {" "}
+                past experience
+              </span>{" "}
+              but also highlights your{" "}
+              <span className="text-blue-400 font-bold italic">
+                future aspirations
+              </span>
+              , making it easier for recruiters to find the perfect candidate.
               With our powerful machine learning and optimization techniques, we
-              ensure <span className="text-blue-400 font-bold italic">optimal pairing</span> between candidates and employers, <span className="text-blue-400 font-bold italic">saving 
-              time and effort</span> for both parties.
+              ensure{" "}
+              <span className="text-blue-400 font-bold italic">
+                optimal pairing
+              </span>{" "}
+              between candidates and employers,{" "}
+              <span className="text-blue-400 font-bold italic">
+                saving time and effort
+              </span>{" "}
+              for both parties.
             </p>
             <p className="text-3xl italic">
-              Get ready to embark on a <span className="text-blue-400 font-bold italic">career journey</span> that truly aligns with
-              your <span className="text-blue-400 font-bold italic">goals</span> and <span className="text-blue-400 font-bold italic">interests</span>, while also providing you with
-              opportunities for <span className="text-blue-400 font-bold italic">growth</span> and <span className="text-blue-400 font-bold italic">development</span>.
+              Get ready to embark on a{" "}
+              <span className="text-blue-400 font-bold italic">
+                career journey
+              </span>{" "}
+              that truly aligns with your{" "}
+              <span className="text-blue-400 font-bold italic">goals</span> and{" "}
+              <span className="text-blue-400 font-bold italic">interests</span>,
+              while also providing you with opportunities for{" "}
+              <span className="text-blue-400 font-bold italic">growth</span> and{" "}
+              <span className="text-blue-400 font-bold italic">
+                development
+              </span>
+              .
             </p>
             {/* Add a placeholder image */}
           </section>
@@ -158,28 +194,48 @@ export default function Home() {
           </section>
 
           <section className="bg-white rounded-lg p-6 mb-6 border border-blue-100">
-          <ul className="space-y-4">
-            <li className="flex flex-col items-center">
-              <span className="material-icons text-blue-500 text-8xl">edit</span>
-              <span className="text-3xl font-semibold text-blue-1000">Personalized job recommendations</span>
-            </li>
-            <li className="flex flex-col items-center">
-              <span className="material-icons text-blue-500 text-8xl">account_box</span>
-              <span className="text-3xl font-semibold text-blue-1000">Robust candidate profiles</span>
-            </li>
-            <li className="flex flex-col items-center">
-              <span className="material-icons text-blue-500 text-8xl">check_circle_outline</span>
-              <span className="text-3xl font-semibold text-blue-1000">Wide range of technical roles</span>
-            </li>
-            <li className="flex flex-col items-center">
-              <span className="material-icons text-blue-500 text-8xl">color_lens</span>
-              <span className="text-3xl font-semibold text-blue-1000">Insights into the company culture</span>
-            </li>
-            <li className="flex flex-col items-center">
-              <span className="material-icons text-blue-500 text-8xl">description</span>
-              <span className="text-3xl font-semibold text-blue-1000">Easy application process</span>
-            </li>
-          </ul>
+            <ul className="space-y-4">
+              <li className="flex flex-col items-center">
+                <span className="material-icons text-blue-500 text-8xl">
+                  edit
+                </span>
+                <span className="text-3xl font-semibold text-blue-1000">
+                  Personalized job recommendations
+                </span>
+              </li>
+              <li className="flex flex-col items-center">
+                <span className="material-icons text-blue-500 text-8xl">
+                  account_box
+                </span>
+                <span className="text-3xl font-semibold text-blue-1000">
+                  Robust candidate profiles
+                </span>
+              </li>
+              <li className="flex flex-col items-center">
+                <span className="material-icons text-blue-500 text-8xl">
+                  check_circle_outline
+                </span>
+                <span className="text-3xl font-semibold text-blue-1000">
+                  Wide range of technical roles
+                </span>
+              </li>
+              <li className="flex flex-col items-center">
+                <span className="material-icons text-blue-500 text-8xl">
+                  color_lens
+                </span>
+                <span className="text-3xl font-semibold text-blue-1000">
+                  Insights into the company culture
+                </span>
+              </li>
+              <li className="flex flex-col items-center">
+                <span className="material-icons text-blue-500 text-8xl">
+                  description
+                </span>
+                <span className="text-3xl font-semibold text-blue-1000">
+                  Easy application process
+                </span>
+              </li>
+            </ul>
 
             {/* <ul className="space-y-4">
               <li className="flex items-center space-x-6">
@@ -233,19 +289,35 @@ export default function Home() {
 
           <section className="bg-white rounded-lg p-6 border border-blue-100 text-justify">
             <p className="text-3xl">
-              Take the first step toward a more <span className="text-blue-400 font-bold italic">fulfilling career</span> by signing up
-              for Career Curve.
+              Take the first step toward a more{" "}
+              <span className="text-blue-400 font-bold italic">
+                fulfilling career
+              </span>{" "}
+              by signing up for Career Curve.
             </p>
             <p className="text-3xl">
               Join us on this incredible journey and unlock a world of career
               possibilities by creating a comprehensive profile that showcases
-              your <span className="text-blue-400 font-bold italic">skills</span>, <span className="text-blue-400 font-bold italic">experience</span>, and <span className="text-blue-400 font-bold italic">aspirations</span>, and let us help you find
-              the perfect job.
+              your{" "}
+              <span className="text-blue-400 font-bold italic">skills</span>,{" "}
+              <span className="text-blue-400 font-bold italic">experience</span>
+              , and{" "}
+              <span className="text-blue-400 font-bold italic">
+                aspirations
+              </span>
+              , and let us help you find the perfect job.
             </p>
 
             <p className="text-3xl">
-              Your <span className="text-blue-400 font-bold italic">dream career</span> is just a click away. Get ready to curve your
-              own <span className="text-blue-400 font-bold italic">path to success</span> with CareerCurve!
+              Your{" "}
+              <span className="text-blue-400 font-bold italic">
+                dream career
+              </span>{" "}
+              is just a click away. Get ready to curve your own{" "}
+              <span className="text-blue-400 font-bold italic">
+                path to success
+              </span>{" "}
+              with CareerCurve!
             </p>
 
             {/* <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg mt-4">
