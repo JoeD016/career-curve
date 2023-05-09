@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Linear Regression",
+    "type": "Supervised Learning",
+    "description": "A basic model that predicts a target variable by fitting the best linear relationship between input features and the target. Often used for regression tasks."
+  },
+  {
+    "name": "Logistic Regression",
+    "type": "Supervised Learning",
+    "description": "A classification algorithm that predicts the probability of a binary outcome by fitting a logistic function to input features. Commonly used for binary classification tasks."
+  },
+  {
+    "name": "Decision Tree",
+    "type": "Supervised Learning",
+    "description": "A tree-like model that recursively splits data into subsets based on feature values, aiming to maximize information gain. Used for both regression and classification tasks."
+  },
+  {
+    "name": "Random Forest",
+    "type": "Supervised Learning",
+    "description": "An ensemble learning method that constructs multiple decision trees and aggregates their predictions. It offers improved accuracy and robustness compared to a single decision tree."
+  },
+  {
+    "name": "Support Vector Machine",
+    "type": "Supervised Learning",
+    "description": "A model that finds the best hyperplane to separate data points of different classes in a high-dimensional space. Used for classification and regression tasks."
+  },
+  {
+    "name": "K-Nearest Neighbors",
+    "type": "Supervised Learning",
+    "description": "An instance-based learning model that classifies new data points based on the majority class of its k nearest neighbors in the feature space. Commonly used for classification tasks."
+  },
+  {
+    "name": "K-Means",
+    "type": "Unsupervised Learning",
+    "description": "A clustering algorithm that partitions data into k clusters by minimizing the sum of squared distances between data points and their corresponding cluster centroids."
+  },
+  {
+    "name": "Principal Component Analysis",
+    "type": "Unsupervised Learning",
+    "description": "A dimensionality reduction technique that linearly transforms data into a new coordinate system, preserving the maximum amount of variance while reducing the number of features."
+  },
+  {
+    "name": "Neural Network",
+    "type": "Supervised Learning",
+    "description": "A computational model inspired by the human brain, consisting of interconnected nodes (neurons) organized in layers. It can learn complex patterns and is used for various tasks, including image recognition, natural language processing, and more."
+  },
+  {
+    "name": "Reinforcement Learning",
+    "type": "Reinforcement Learning",
+    "description": "A learning paradigm where an agent learns to make decisions by interacting with an environment, receiving feedback in the form of rewards or penalties. Commonly used in robotics, game playing, and control systems."
+  }
+]
